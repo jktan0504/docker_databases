@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  mysql_db:
+    build:
+      context: ./mysql
+      dockerfile: Dockerfile
+    hostname: arrivo_mysql_db
+    container_name: arrivo_mysql_db
+    restart: always
+    ports:
+      - "3306:3306"
+    env_file: .env
