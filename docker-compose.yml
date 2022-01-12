@@ -8,5 +8,5 @@ services:
     container_name: arrivo_mysql_db
     restart: always
     ports:
-      - "3306:3306"
+      - "${MYSQL_PORT}:${MYSQL_PORT}"
     env_file: .env
